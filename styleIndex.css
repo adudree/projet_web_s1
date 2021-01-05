@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body {
+    background: #474747;
+    height: 100vh;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    overflow: hidden;
+}
+
+#titre {
+    margin-top: 20px;
+    text-align: center;  
+}
+
+h1 {
+    font-family: 'Iceland', sans-serif;
+    font-size:60px !important; /*!important pour dépasser le normalize*/
+}
+
+#erreur {
+   
+    position:absolute;
+    text-align: center;
+    width: 50%;
+    left:25%;
+    height:12%;
+    top:44%;
+}
+
+#SOS {
+    color: black;
+    background: linear-gradient( #ADFFC4, #94D29F);
+    position: absolute;
+    text-align: left;
+    width: 50%;
+    left: 25%;
+    height: 50%;
+    top: 25%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#OK {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ADFFC4;
+    text-align: center;
+    font-family: 'Iceland', sans-serif;
+    font-weight: bold;
+}
+
+#OK:hover {
+    background-color: #4AAD66;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.invisible {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 40px !important; 
+    }
+
+    #SOS {
+        width: 90%;
+        left: 4%;
+        height: 80%;
+        top: 10%;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #OK {
+        right: 10px;
+        bottom: 10px;
+    }
+
+}

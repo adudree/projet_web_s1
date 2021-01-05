@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body {
+    background: #474747;
+    height: 100vh;
+    color: #fefafe;
+    font-family: 'PT Sans', sans-serif;
+    overflow: hidden;
+}
+
+/* --- Informations [Pop-Up] --- */
+
+#plusdInfo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    border:none;
+}
+
+#infopop {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #474747;
+    z-index: 1;
+
+    text-align:center;
+}
+
+#WM {
+    font-size: 60px !important;
+}
+
+#interface {
+    width: 480px;
+    height: 150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 50px 50px 50px;
+   
+}
+
+.boutons {
+    height: 20px;
+    background-color: #94D29F;
+    border-radius: 15px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+
+    justify-self: right;
+    align-self: center;
+}
+
+#go {
+    width: 80px;
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+#read {
+    width: 20px;
+    background-color: rgba(50, 50, 50, 0.8);
+
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+#more {
+    width: 20px;
+
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.explications {
+    margin-left: 10px;
+    align-self: center;
+    justify-self: start;
+    text-align:left;
+}
+
+#howtogo {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+#howtoread {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+#howtomore {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+#lejeu {
+    width: 60%;
+    margin: 50px auto;
+    text-align: left;
+    background-color: #696969;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+.visible {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.invisible {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* --- Bandeau fond noir --- */
+
+#banner {
+    display: grid;
+    width:90vw;
+    grid-template-columns: 70% auto;
+    align-items: center;
+    margin:10px auto;
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 20px;
+    padding:20px;
+}
+
+#text {
+    height:100%;
+    min-height:200px;
+    text-align: justify;
+    padding-right:20px;
+}
+
+h2 {
+    font-family: 'Iceland', sans-serif;
+}
+
+#suite {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+    #suite:hover {
+        background-color: rgba(50, 50, 50, 0.2);
+    }
+
+
+.label {
+    font-weight: bold;
+    color: #94D29F;
+    font-size: 1.2em;
+}
+
+.form {
+    display: flex;
+    height:70%;
+    max-height: 200px;
+    flex-flow: column;
+    justify-content: space-around;
+    padding:20px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.menu {
+    border-radius: 15px;
+    border:none;
+    height:24px;
+    text-align: center;
+}
+
+button {
+    color: #fff;
+    font-weight: bold;
+    height: 30px;
+    background-color: #94D29F;
+    transition: 0.5s;
+    font-family: 'Iceland', sans-serif;
+}
+
+    button:hover {
+        background-color: #4AAD66;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .restart {
+        border:none;
+        border-radius:10px;
+        height:40px;
+        width:70px;
+        text-align: center;
+        margin:auto;
+    }
+
+#content {
+    height:100vh;
+    position: relative;
+    padding:10px;
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    background-size: cover;
+    background-position:center;
+}
+
+/* ======== ILLUSTRATIONS ======= */
+
+/* Backgrounds fenêtre */
+
+/* illustrations */
+#illustration {
+    height:50vh;
+    width:90vh;
+    margin-top:5vh;
+    display: flex;
+}
+
+#illuL, #illuR {
+    height:100%;
+    width:50vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: flotter2 2s infinite alternate ease-in-out;
+}
+
+#globe {
+    width:50vw;
+    width: 100%;
+    animation: flotter 1s infinite alternate ease-in-out;
+}
+
+@keyframes flotter {
+	to {
+		transform: translateY(-15px);
+	}
+}
+
+@keyframes flotter2 {
+	to {
+		transform: translateY(-10px);
+	}
+}
+
+/* infos thermomètre & météo */
+
+#infos {
+    position: fixed;
+    bottom:0;
+    right:0;
+    display: flex;
+    flex-flow: column;
+    margin:10px;
+    height: 120px;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding:5px;
+}
+
+.icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center;
+    height:60px;
+}
+
+#thermometre {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+}
+
+#meteo {
+    width:60px;
+}
+
+@media screen and (max-width: 1000px) {
+    #banner {
+        grid-template-columns: auto;
+        grid-template-rows: 60% auto;
+        margin:10px auto;
+    }
+    #content {
+        padding:0;
+    }
+    .form {
+        height:100%;
+        width:70%;
+        margin:10px auto;
+        padding:10px 0;
+    }
+    #illustration {
+        margin-top: 0vh;
+        height: 50vh;
+        width: 100vw;
+    }
+    #illuL, #illuR {
+        background-position: top;
+    }
+    
+    #infos {
+        flex-direction: row;
+        height:auto;
+    }
+
+    .icon {
+        height: 40px;
+    }
+
+    #thermometre {
+        width: 20px;
+    }
+
+    #meteo {
+        width: 40px;
+    }
+
+    #interface {
+        width: 90%;
+        height: 30%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 100px auto;
+        grid-template-rows: 33% 33% 33%;
+    }
+
+    #WM {
+        font-size: 40px !important;
+    }
+
+    #lejeu {
+        width: 90%;
+        margin: auto;
+        text-align: left;
+        background-color: #696969;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+}

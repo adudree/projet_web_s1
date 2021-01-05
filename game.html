@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Weather Machine</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="img/icone.ico">
+</head>
+<body>
+
+    <div id="infopop" class="invisible">
+        <h2 id="WM">Weather Machine</h2>
+
+        <div id="interface">
+            
+                <div id="go" class="boutons"> Teleport </div>
+                <div id="read" class="boutons"> > </div>
+                <div id="more" class="boutons"> ? </div>
+            
+                <div id="howtogo" class="explications"> Click to teleport after you typed the name of a city.</div>
+                <div id="howtoread" class="explications"> Click to read the next message of the character.</div>
+                <div id="howtomore" class="explications"> Click to know more about the game: <i>you are here.</i> </div>
+           
+        </div>
+
+        <div id="lejeu">
+            <p>
+                This is a game where you must help the character to find a place with the weather she needs. <br>
+                You can enter the name of a city on Earth, and the character will be transported in a place with the same current weather. <br>
+                For example, if you enter "New York" and there's rain in New York now, the character will be wet. <br>
+                Read what she says and find out what weather she needs.
+            </p>
+            <p><i>Enjoy</i></p>
+            <p>Marie GUILLOT & Audrey MARTIN - 2020</p>
+        </div>
+    </div>
+
+    <button id="plusdInfo"> ? </button>
+
+    <section id="content" class="bgStart">
+        <article id="banner">
+            <div id="text">
+                <h2 id="myLevel"></h2>
+                <p id="myText"></p>
+                <button id="suite"> > </button>
+                <a href="index.html" class="invisible" id="restart"><button class="restart">Restart</button></a>
+            </div>
+            <div class="form">
+                <p class="label">Where do we go ?</p>
+                <input type="text" class="menu" name="city" id="city" placeholder="Enter a city name">
+                <button class="menu" id="search" type="submit">Teleport</button>
+            </div>
+        </article>
+        
+        <article id="illustration">
+            <div id="illuL" class="leftStart"> <img id="globe" /> </div>
+            <div id="illuR" class="rightStart"></div>
+            
+            <div id="infos">
+                <div id="thermometre" class="icon"></div>
+                <div id="meteo" class="icon"></div>
+            </div>
+        </article>
+
+        
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
